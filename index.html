@@ -25,14 +25,14 @@
   <div id="root"></div>
 
   <script type="text/babel">
-    const { useState, useEffect, useRef } = React;
+    const { useState, useEffect } = React;
 
-    const HERO_IMG = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80";
-    const HISTORY_IMG = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80";
-    const RULES_IMG = "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80";
-    const CHEAP_IMG = "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&q=80";
-    const PAY_IMG = "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80";
-    const FOOD_IMG = "https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&q=80";
+    const HERO_IMG = "https://commons.wikimedia.org/wiki/Special:FilePath/Image%20of%20a%20Singapore%20hawker%20center.jpg";
+    const HISTORY_IMG = "https://commons.wikimedia.org/wiki/Special:FilePath/Maxwell%20Food%20Centre%20heritage%20signboard%20-%202022-08-13.jpg";
+    const RULES_IMG = "https://commons.wikimedia.org/wiki/Special:FilePath/Soon%20Heng%20Cooked%20Food%20at%20Changi%20Village%20Food%20Centre%2C%20Singapore%20-%2020070211.jpg";
+    const CHEAP_IMG = "https://commons.wikimedia.org/wiki/Special:FilePath/Hawker%20Center%2C%20Singapore.jpg";
+    const PAY_IMG = "https://commons.wikimedia.org/wiki/Special:FilePath/Drink%20stall%20at%20Changi%20Village%20Food%20Centre%2C%20Singapore%20-%2020070211.jpg";
+    const FOOD_IMG = "https://commons.wikimedia.org/wiki/Special:FilePath/Interior%20of%20Lau%20Pa%20Sat%2C%202018%20%2808%29.jpg";
 
     const NAV_ITEMS = [
       { id: "hero", en: "TOP", ja: "TOP" },
@@ -67,24 +67,24 @@
             name: "ハイナニーズ・チキンライス",
             en: "Hainanese Chicken Rice",
             origin: "🇨🇳 中国・海南島",
-            price: "S$4〜7",
-            img: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80",
+            price: "S$5〜8",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Hainanese%20chicken%20rice%20in%20Singapore.jpg",
             desc: "シンガポールの「国民食」。海南島出身の移民が持ち込んだWenchang鶏の調理法を現地化。鶏を丸ごと茹でたスープで炊いた香り米と、しっとり蒸し鶏の組み合わせ。チリ・生姜・醤油の3種のソースが必需品。20世紀初頭にシンガポールで独自進化を遂げた。",
           },
           {
             name: "チャークウェイティオ",
             en: "Char Kway Teow",
             origin: "🇨🇳 中国・広東省（潮州）",
-            price: "S$4〜8",
-            img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+            price: "S$5〜8",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Char%20kway%20teow.JPG",
             desc: "平たい米麺をラードと強火で炒めた労働者の料理。潮州・福建系移民が1950〜60年代にシンガポールの波止場労働者向けに広めた。血蛤、海老、チャイニーズソーセージ、卵が入り、独特の「鑊氣（ウォーク・ヘイ）」と呼ばれる炭火の香りが命。",
           },
           {
             name: "ホッケンミー",
             en: "Hokkien Mee",
             origin: "🇨🇳 中国・福建省",
-            price: "S$4〜7",
-            img: "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80",
+            price: "S$4〜8",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore%20style%20Hokkien%20mee.jpg",
             desc: "太い黄色麺と平たい米麺を、海老頭と豚骨で取ったスープで炒め煮にした一品。1950年代にシンガポールのRokkor Roadで福建系移民が屋台を始めたのが起源。サンバルとライムを絞って食べるのが定番スタイル。濃厚な海鮮の旨みが特徴。",
           },
           {
@@ -92,7 +92,7 @@
             en: "Bak Kut Teh",
             origin: "🇨🇳 中国・福建省",
             price: "S$7〜12",
-            img: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Bak%20Kut%20Teh%2C%20Singapore.JPG",
             desc: "豚スペアリブをにんにく・胡椒・漢方ハーブで長時間煮込んだスープ料理。19世紀末に過酷な港湾労働に従事した福建系移民が体力回復のために食べた料理が起源。シンガポールは胡椒強めのさっぱり系、マレーシアは漢方ハーブ強めの濃い系が特徴。",
           },
           {
@@ -100,7 +100,7 @@
             en: "Rojak",
             origin: "🇸🇬 シンガポール（多文化融合）",
             price: "S$4〜6",
-            img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Rojak%20in%20Singapore.jpg",
             desc: "「混ぜ合わせ」を意味するマレー語「Rojak」が名前の由来。パイナップル・ヤムイモ・もやし・豆腐揚げ・油条（揚げパン）などを、エビ味噌・砂糖・ライムで作った甘辛タレで和えてピーナッツをかける。中国とマレーの食文化が融合した純シンガポール料理。",
           },
         ],
@@ -113,8 +113,8 @@
             name: "ナシレマ",
             en: "Nasi Lemak",
             origin: "🇲🇾 マレーシア・マレー半島",
-            price: "S$3〜6",
-            img: "https://images.unsplash.com/photo-1630851840633-f96999247032?w=600&q=80",
+            price: "S$4〜9",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20lemak%20on%20banana%20leaf.jpg",
             desc: "ココナッツミルクとパンダンリーフで炊いた香り米が主役のマレー系料理。「脂の多い米」という意味。サンバル（辛味ソース）・アンチョビ・ピーナッツ・ゆで卵・キュウリが定番の付け合わせ。元々はマレー半島の農村の朝食。シンガポールでは全民族に愛される国民食。",
           },
           {
@@ -122,7 +122,7 @@
             en: "Satay",
             origin: "🇮🇩 インドネシア",
             price: "S$6〜12（5本〜）",
-            img: "https://images.unsplash.com/photo-1529563021893-cc83c992d75d?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Satay.JPG",
             desc: "香辛料で下味をつけた鶏・牛・羊肉を竹串に刺して炭火でグリルした料理。インドネシア発祥でジャワ島が起源とされる。シンガポールには19世紀にインドネシア・マレー系移民が持ち込んだ。ピーナッツソース・ライムケトゥパット（米餅）と共に食べるのが定番。Lau Pa Sat夜のサテー通りが有名。",
           },
           {
@@ -130,7 +130,7 @@
             en: "Laksa",
             origin: "🇸🇬 シンガポール（プラナカン文化）",
             price: "S$4〜8",
-            img: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Laksa%20in%20Singapore.JPG",
             desc: "ココナッツミルクベースの濃厚なカレースープに米麺（ライスヌードル）を合わせたプラナカン料理の代表作。中国福建省の移民とマレー人の混血文化「ニョニャ（Nyonya）」が生んだ独自の一品。海老・魚かまぼこ・厚揚げ・もやしが入り、上にサンバルを添える。シンガポールの名物として世界的に有名。",
           },
         ],
@@ -144,7 +144,7 @@
             en: "Roti Prata",
             origin: "🇮🇳 インド南部",
             price: "S$1.5〜4",
-            img: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Roti%20Prata%20Curry%20Large.JPG",
             desc: "薄く伸ばした小麦生地をギーで焼いたインド系フラットブレッド。南インドの「パロタ」が起源で、シンガポールには19世紀にタミル系移民が持ち込んだ。外はカリカリ、中はモチモチの食感が特徴。フィッシュカレーやダルカレーにつけて食べるのが定番。卵・チーズなどのトッピング版も人気。",
           },
           {
@@ -152,7 +152,7 @@
             en: "Fish Head Curry",
             origin: "🇸🇬 シンガポール（インド×中国融合）",
             price: "S$18〜35（1頭）",
-            img: "https://images.unsplash.com/photo-1585325701165-1b1a6d72fef7?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Fish%20head%20curry%20in%20Singapore%20-%2020130315.jpg",
             desc: "魚の頭を丸ごと南インド系スパイスカレーで煮込んだシンガポール独自の料理。1950年代にシンガポールのインド系料理人M.J.Gomezが、中国人の「魚頭を大事にする」食文化とインドのカレーを融合させて考案したと言われる。特にカツオ（レッドスナッパー）の頭が人気。",
           },
         ],
@@ -166,7 +166,7 @@
             en: "Chilli Crab",
             origin: "🇸🇬 シンガポール",
             price: "S$50〜100（時価・1kg）",
-            img: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Chilli%20Crab.JPG",
             desc: "シンガポールの「国民シーフード」。1950年代にChef Cher Yam Tian夫人が泥蟹をトマトケチャップと辛味噌で炒めたのが起源。甘辛の卵とじソースが絡む濃厚な味わいで、蒸し饅頭（マントウ）でソースをぬぐって食べるのが作法。ホーカーよりシーフードレストランで食べることが多い。",
           },
           {
@@ -174,7 +174,7 @@
             en: "Kaya Toast",
             origin: "🇸🇬 シンガポール（英国×マレー文化）",
             price: "S$2〜4",
-            img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80",
+            img: "https://commons.wikimedia.org/wiki/Special:FilePath/Kaya%20Toast%20with%20Coffee%20Cropped.jpg",
             desc: "カリカリに焼いたトーストにカヤジャム（ヤシ砂糖・卵・ヤシミルクで作った緑がかったジャム）とバターを挟んだシンガポールの朝食の定番。半熟卵に醤油と胡椒をかけて一緒に食べるのがシンガポール流。コピ（ローカルコーヒー）またはテー（ミルクティー）とセットで楽しむ国民的ブレックファスト。",
           },
         ],
@@ -302,9 +302,9 @@
 
             <section id="history" style={sec}>
               <SectionHeader num="01 — HISTORY & CULTURE" ja="ホーカーの歴史と文化" en="From Street Hawkers to UNESCO Heritage" sp={sp} />
-              <img src={HISTORY_IMG} alt="history" style={{ width: "100%", height: sp ? 190 : 300, objectFit: "cover", filter: "brightness(0.75)", marginBottom: 28 }} />
+              <img src={HISTORY_IMG} alt="history" style={{ width: "100%", height: sp ? 190 : 300, objectFit: "cover", filter: "brightness(0.75)" }} />
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 36 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, margin: "28px 0 36px" }}>
                 {[["110+","ホーカーセンター数"],["~13,000","認定ストール数"],["S$3〜6","平均的な1食"],["3代目","多くの名店が継承"]].map(([v,l]) => (
                   <div key={l} style={{ border: `1px solid #222`, padding: sp ? "14px 12px" : "18px 16px", background: "#111" }}>
                     <div style={{ fontFamily: "sans-serif", fontSize: sp ? 22 : 30, fontWeight: 700, color: GOLD, lineHeight: 1 }}>{v}</div>
@@ -504,8 +504,8 @@
                 <div style={infoBoxTitle}>旅行者へのアドバイス</div>
                 <div style={{ fontSize: sp ? 12 : 13, lineHeight: 2, color: "#999" }}>
                   📌 <strong style={{ color: WHITE }}>現金S$50〜100</strong>を常に携帯することを強くお勧めします。特にローカル色の強いホーカーはキャッシュレス対応が少ない場合があります。<br />
-                  📌 <strong style={{ color: WHITE }}>HGDプログラム</strong>により政府が手数料を補助（2026年6月まで）してきたため、SGQRの普及が急速に進んでいます。<br />
-                  📌 <strong style={{ color: WHITE }}>SGQR+（2024年11月〜）</strong>の展開により、1枚のQRコードでより多くの決済サービスに対応するホーカーが増加中です。
+                  📌 <strong style={{ color: WHITE }}>HGDプログラム</strong>により政府が手数料を補助してきたため、SGQRの普及が急速に進んでいます。<br />
+                  📌 <strong style={{ color: WHITE }}>SGQR+</strong>の展開により、1枚のQRコードでより多くの決済サービスに対応するホーカーが増加中です。
                 </div>
               </div>
             </section>
@@ -606,7 +606,7 @@
               <div style={{ fontFamily: "sans-serif", fontSize: 9, letterSpacing: 2, color: "#444", marginBottom: 16 }}>UNESCO Intangible Cultural Heritage of Humanity — 2020</div>
               <div style={{ fontFamily: "sans-serif", fontSize: 10, color: "#333", lineHeight: 1.8 }}>
                 本ページの情報は調査・取材に基づきますが、ホーカーセンターの営業時間・ストール詳細は変更される場合があります。最新情報はNEA公式サイトまたは現地にてご確認ください。<br />
-                Images: Unsplash (CC0 License)
+                Images stored locally in this repository.
               </div>
             </footer>
           </div>
