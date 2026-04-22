@@ -547,6 +547,7 @@
       const { isMobile, isTabletUp, isDesktop } = useViewport();
       const [active, setActive] = useState("hero");
       const [openCard, setOpenCard] = useState(null);
+      const currentLang = "ja";
 
       useEffect(() => {
         const obs = new IntersectionObserver(
